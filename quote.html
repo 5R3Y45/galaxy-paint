@@ -365,7 +365,6 @@ rel="stylesheet">
         </style>
         
         
-        
         <script>
     document.getElementById('sendQuote').addEventListener('click', function () {
         const form = document.getElementById('quoteForm');
@@ -379,21 +378,22 @@ rel="stylesheet">
             }
         });
 
-        // Construct the Gmail compose URL
         const email = "sreyas.k.sajith@gmail.com"; // Replace with your email address
         const subject = "Quote Request";
         const body = encodeURIComponent(emailBody);
-        const gmailUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
 
         if (navigator.userAgent.match(/Mobile|Android|iPhone|iPad|iPod/i)) {
-            // Use mailto for better mobile compatibility
-            window.location.href = gmailUrl;
+            // Use mailto for mobile devices
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
         } else {
-            // Open Gmail compose in a new tab for desktop
+            // Use Gmail web for desktop
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${body}`;
             window.open(gmailUrl, '_blank');
         }
     });
 </script>
+
 
     </div>
 </div>
