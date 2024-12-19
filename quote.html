@@ -365,34 +365,35 @@ rel="stylesheet">
         </style>
         
         
-        <script>
-    document.getElementById('sendQuote').addEventListener('click', function () {
-        const form = document.getElementById('quoteForm');
-        const formData = new FormData(form);
-
-        let emailBody = "Quote Request Details:\n\n";
-
-        formData.forEach((value, key) => {
-            if (value && value > 0) { // Include only non-zero quantities
-                emailBody += `${key.replaceAll('_', ' ')}: ${value}\n`;
-            }
-        });
-
-        const email = "sreyas.k.sajith@gmail.com"; // Replace with your email address
-        const subject = "Quote Request";
-        const body = encodeURIComponent(emailBody);
-
-        if (navigator.userAgent.match(/Mobile|Android|iPhone|iPad|iPod/i)) {
-            // Use mailto for mobile devices
-            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            window.location.href = mailtoLink;
-        } else {
-            // Use Gmail web for desktop
-            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${body}`;
-            window.open(gmailUrl, '_blank');
-        }
-    });
-</script>
+<script>
+            document.getElementById('sendQuote').addEventListener('click', function () {
+                const form = document.getElementById('quoteForm');
+                const formData = new FormData(form);
+        
+                let emailBody = "Quote Request Details:\n\n";
+        
+                formData.forEach((value, key) => {
+                    if (value && value > 0) { // Include only non-zero quantities
+                        emailBody += `${key.replaceAll('_', ' ')}: ${value}\n`;
+                    }
+                });
+        
+                const email = "accounts@galaxypaint.in"; // Replace with your email address
+                const ccEmail = "bdm1@galaxypaint.in"; // Replace with the CC recipient's email
+                const subject = "Quote Request";
+                const body = encodeURIComponent(emailBody);
+        
+                if (navigator.userAgent.match(/Mobile|Android|iPhone|iPad|iPod/i)) {
+                    // Use mailto for mobile devices
+                    const mailtoLink = `mailto:${email}?cc=${ccEmail}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                    window.location.href = mailtoLink;
+                } else {
+                    // Use Gmail web for desktop
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&cc=${ccEmail}&su=${encodeURIComponent(subject)}&body=${body}`;
+                    window.open(gmailUrl, '_blank');
+                }
+            });
+        </script>
 
 
     </div>
