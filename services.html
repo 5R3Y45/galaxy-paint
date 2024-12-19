@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hairnic - Single Product Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+<div id="spinner" 
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="paint-loader">
+    <div class="brush-stroke brush-stroke-1"></div>
+    <div class="brush-stroke brush-stroke-2"></div>
+    <div class="brush-stroke brush-stroke-3"></div>
+    <div class="brush-stroke brush-stroke-4"></div>
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Styles for the painty loader -->
+<style>
+/* Basic Loader Styling */
+#spinner {
+    z-index: 1050;
+}
+
+/* Painty Animation */
+.paint-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    border-radius: 5px;
+    animation: paint-stroke 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.brush-stroke-1 {
+    animation-delay: 0s;
+}
+
+.brush-stroke-2 {
+    animation-delay: 0.3s;
+}
+
+.brush-stroke-3 {
+    animation-delay: 0.6s;
+}
+
+.brush-stroke-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes paint-stroke {
+    0% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50px) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+}
+</style>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/name.png" alt="Galaxy Paints" class="navbar-logo">
+                </a>
+                <style>
+                    .navbar-logo {
+                        margin-top: 0px;
+                        height: auto; 
+                        max-height: 100%; 
+                        width: 300px;
+                    }
+                    
+                </style>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="quote.html" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">  Get Quote</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-white mb-3 animated slideInDown">Services</h1>
+        </div>
+    </div>
+    <!-- Hero End -->
+     <!-- Services Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row align-items-center text-center">
+            <!-- Service 1: Custom Paint Manufacturing -->
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-industry fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">Custom Paint Manufacturing</h5>
+                    <p>At Galaxy Paints, we offer bespoke paint solutions to suit every surface, whether it's for home decor, commercial spaces, or large-scale industrial projects. Our paints are crafted with precision and are designed to deliver exceptional quality and durability.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-paint-roller fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">Professional Painting Services</h5>
+                    <p>Our expert team handles all types of painting works, from interior and exterior home painting to large-scale commercial projects. With a keen eye for detail and high-quality tools, we deliver flawless finishes every time.</p>
+                </div>
+            </div>
+            
+            <!-- Service 3: Efficient Distribution -->
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-truck fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">Efficient Distribution</h5>
+                    <p>With a robust network of over 750 dealers across Maharashtra, Tamilnadu, Karnataka, and Kerala, we provide timely and reliable distribution. Whether you need a small order or a bulk delivery, our logistics system ensures your products arrive on time and in perfect condition.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center text-center">
+            <!-- Service 4: Eco-Friendly Solutions -->
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-leaf fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">Eco-Friendly Solutions</h5>
+                    <p>We are committed to sustainability. Our eco-friendly paints reduce environmental impact without compromising on quality. From low-VOC formulas to energy-efficient production processes, Galaxy Paints is paving the way for a greener tomorrow.</p>
+                </div>
+            </div>
+            <!-- Service 5: After-Sales Support -->
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-headset fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">After-Sales Support</h5>
+                    <p>Our service doesn’t end after the sale. We provide continuous after-sales support, including product usage tips, maintenance advice, and troubleshooting assistance to ensure the longevity and performance of your paint applications.</p>
+                </div>
+            </div>
+            <!-- Service 6: Custom Color Matching -->
+            <div class="col-md-4 mb-4">
+                <div class="service-item bg-white shadow-sm p-4 rounded border">
+                    <i class="fa fa-palette fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="mb-3">Custom Color Matching</h5>
+                    <p>Looking for the perfect shade? We offer custom color matching services, ensuring that every project achieves the exact color and finish you desire. No more compromises – get the color that matches your vision perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+
+
+
+
+    <!-- Blog Start -->
+    <!-- <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-primary mb-3"><span class="fw-light text-dark">From Our</span> Blog Articles</h1>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="blog-item border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/blog-1.jpg" alt="">
+                        <a href="" class="h5 lh-base d-inline-block">Foods that are good for your hair growing</a>
+                        <div class="d-flex text-black-50 mb-2">
+                            <div class="pe-3">
+                                <small class="fa fa-eye me-1"></small>
+                                <small>9999 Views</small>
+                            </div>
+                            <div class="pe-3">
+                                <small class="fa fa-comments me-1"></small>
+                                <small>9999 Comments</small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+                        <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="blog-item border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/blog-2.jpg" alt="">
+                        <a href="" class="h5 lh-base d-inline-block">How to take care of hair naturally</a>
+                        <div class="d-flex text-black-50 mb-2">
+                            <div class="pe-3">
+                                <small class="fa fa-eye me-1"></small>
+                                <small>9999 Views</small>
+                            </div>
+                            <div class="pe-3">
+                                <small class="fa fa-comments me-1"></small>
+                                <small>9999 Comments</small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+                        <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="blog-item border h-100 p-4">
+                        <img class="img-fluid mb-4" src="img/blog-3.jpg" alt="">
+                        <a href="" class="h5 lh-base d-inline-block">How to use our natural & organic shampoo</a>
+                        <div class="d-flex text-black-50 mb-2">
+                            <div class="pe-3">
+                                <small class="fa fa-eye me-1"></small>
+                                <small>9999 Views</small>
+                            </div>
+                            <div class="pe-3">
+                                <small class="fa fa-comments me-1"></small>
+                                <small>9999 Comments</small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+                        <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Blog End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-white footer">
+    <div class="container py-5">
+        <div class="row g-5 text-center text-lg-start">
+            <!-- Logo and Description -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="img/footer-logo.jpg" alt="Galaxy Paints Logo" class="img-fluid" style="width: 200px; height: auto ; margin-top: -60px">
+                </a>
+                <p class="mb-0">Your trusted partner for superior painting solutions.</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3" style="color: red;"></i>Sector No-4, Balaji Heights, 4th Floor, Near Jay Ganesh Samrajya chowk, Moshi, Pune, India 412105</p>
+                <p><i class="fa fa-phone-alt me-3" style="color: red;"></i>+91 9527702536</p>
+                <p><i class="fa fa-envelope me-3" style="color: red;"></i>accounts@galaxypaint.in</p>
+                <div class="d-flex justify-content-center justify-content-lg-start pt-2">
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.facebook.com/galaxypaintspune" ><i class="fab fa-facebook-f" style="color: black;"></i></a>
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.instagram.com/galaxypaints.official?igsh=dmZyaDFvbWl5N3Ax"><i class="fab fa-instagram" style="color: black;"></i></a>
+                </div>
+            </div>
+            <!-- Products Section -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="mb-4">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">LOTUS Luxury Interior Emulsion</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">LUSTRE Water Base</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">GLOWSTAR Premium Emulsion</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">PAREX Exterior Emulsion</a></li>
+                </ul>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="mb-4">Popular Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="about.html" style="color: inherit;">About Us</a></li>
+                    <li><a class="btn btn-link" href="contact.html" style="color: inherit;">Contact Us</a></li>
+                    <li><a class="btn btn-link" href="" style="color: inherit;">Download Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <div class="hidden-backlink">
+        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+    </div>
+     <style>
+        .hidden-backlink {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+        
+     </style>
+    <!-- Developed By Section Start -->
+    <div class="container-fluids py-4 bg-dark text-center">
+        <p class="mb-0 text-light" style="font-size: 14px;">
+            Designed & Developed by 
+            <a href="https://sreyas.tech" target="_blank" class="text-uppercase text-primary fw-bold text-decoration-none">
+                S.R.E.Y.A.S
+            </a>
+        </p>
+    </div>
+    <style>
+        .container-fluids {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .container-fluids a {
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluids a:hover {
+            color: #f4c20d; /* A golden classy hover effect */
+            text-decoration: underline; /* Optional underline on hover */
+        }
+        
+    </style>
+    
+    <!-- Developed By Section End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: red;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

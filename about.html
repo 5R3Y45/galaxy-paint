@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hairnic - Single Product Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+<div id="spinner" 
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="paint-loader">
+    <div class="brush-stroke brush-stroke-1"></div>
+    <div class="brush-stroke brush-stroke-2"></div>
+    <div class="brush-stroke brush-stroke-3"></div>
+    <div class="brush-stroke brush-stroke-4"></div>
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Styles for the painty loader -->
+<style>
+/* Basic Loader Styling */
+#spinner {
+    z-index: 1050;
+}
+
+/* Painty Animation */
+.paint-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    border-radius: 5px;
+    animation: paint-stroke 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.brush-stroke-1 {
+    animation-delay: 0s;
+}
+
+.brush-stroke-2 {
+    animation-delay: 0.3s;
+}
+
+.brush-stroke-3 {
+    animation-delay: 0.6s;
+}
+
+.brush-stroke-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes paint-stroke {
+    0% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50px) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+}
+</style>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/name.png" alt="Galaxy Paints" class="navbar-logo">
+                </a>
+                <style>
+                    .navbar-logo {
+                        margin-top: 0px;
+                        height: auto; 
+                        max-height: 100%; 
+                        width: 300px;
+                    }
+                    
+                </style>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="quote.html" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">  Get Quote</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-white mb-3 animated slideInDown">About Us</h1>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+<!-- Our Values Start -->
+<section class="our-values py-5" style="background-color: #e7eff7;">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="value-item p-4">
+                    <i class="fa fa-cogs fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="text-dark mb-3">Innovation</h5>
+                    <p class="text-muted">We continuously strive for innovative solutions, ensuring that our products meet the evolving needs of our customers.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="value-item p-4">
+                    <i class="fa fa-leaf fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="text-dark mb-3">Sustainability</h5>
+                    <p class="text-muted">Galaxy Paints is committed to environmentally friendly practices, producing products that not only look good but also protect the planet.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="value-item p-4">
+                    <i class="fa fa-handshake fa-4x text-primary mb-3" style="color: red;"></i>
+                    <h5 class="text-dark mb-3">Customer Trust</h5>
+                    <p class="text-muted">We believe in building lasting relationships with our customers by delivering quality products and exceptional service every time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Values End -->
+
+
+<!-- About Us Start -->
+<section class="about-us py-5" style="background-color: #f7f9fc;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="about-image text-center">
+                    <img class="img-fluid rounded shadow-lg" src="img/paint-production.webp" alt="Galaxy Paints Facility">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="text-primary fw-bold mb-4" style="color: red;">Our Story</h2>
+                    <p class="mb-3 text-muted">
+                        Established in 2014, Galaxy Paints Private Limited started as a humble venture exploring the dynamic world of paints. By 2016, we expanded into manufacturing, and in 2017, we emerged as a trusted name, crafting premium decorative paints with a passion for innovation and quality.
+                    </p>
+                    <p class="mb-3 text-muted">
+                        Based in Wadki, Maharashtra, our state-of-the-art facility produces 5000 tons annually. Equipped with advanced machinery and R&D labs, we maintain uncompromising standards, ensuring that every product reflects our dedication to excellence.
+                    </p>
+                    <p class="mb-3 text-muted">
+                        With a robust network spanning Maharashtra, Karnataka, and Kerala, we operate 4 sales depots, 4 C&F hubs, and over 750 dealer-based counters. Our mission is to bring vibrant colors to homes and provide tailored solutions for infrastructure and construction needs.
+                    </p>
+                    <p class="text-muted">
+                        From Exterior & Interior Emulsions to Primers and Distempers, Galaxy Paints is your trusted partner in transforming spaces with elegance and durability.
+                    </p>
+                    <a href="product.html" class="btn btn-primary mt-3" style="background-color: red;">Explore Our Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Us End -->
+
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-white footer">
+    <div class="container py-5">
+        <div class="row g-5 text-center text-lg-start">
+            <!-- Logo and Description -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="img/footer-logo.jpg" alt="Galaxy Paints Logo" class="img-fluid" style="width: 200px; height: auto ; margin-top: -60px">
+                </a>
+                <p class="mb-0">Your trusted partner for superior painting solutions.</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3" style="color: red;"></i>Sector No-4, Balaji Heights, 4th Floor, Near Jay Ganesh Samrajya chowk, Moshi, Pune, India 412105</p>
+                <p><i class="fa fa-phone-alt me-3" style="color: red;"></i>+91 9527702536</p>
+                <p><i class="fa fa-envelope me-3" style="color: red;"></i>accounts@galaxypaint.in</p>
+                <div class="d-flex justify-content-center justify-content-lg-start pt-2">
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.facebook.com/galaxypaintspune" ><i class="fab fa-facebook-f" style="color: black;"></i></a>
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.instagram.com/galaxypaints.official?igsh=dmZyaDFvbWl5N3Ax"><i class="fab fa-instagram" style="color: black;"></i></a>
+                </div>
+            </div>
+            <!-- Products Section -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="mb-4">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">LOTUS Luxury Interior Emulsion</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">LUSTRE Water Base</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">GLOWSTAR Premium Emulsion</a></li>
+                    <li><a class="btn btn-link" href="products.html" style="color: inherit;">PAREX Exterior Emulsion</a></li>
+                </ul>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="mb-4">Popular Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="about.html" style="color: inherit;">About Us</a></li>
+                    <li><a class="btn btn-link" href="contact.html" style="color: inherit;">Contact Us</a></li>
+                    <li><a class="btn btn-link" href="" style="color: inherit;">Download Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <div class="hidden-backlink">
+        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+    </div>
+     <style>
+        .hidden-backlink {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+        
+     </style>
+    <!-- Developed By Section Start -->
+    <div class="container-fluids py-4 bg-dark text-center">
+        <p class="mb-0 text-light" style="font-size: 14px;">
+            Designed & Developed by 
+            <a href="https://sreyas.tech" target="_blank" class="text-uppercase text-primary fw-bold text-decoration-none">
+                S.R.E.Y.A.S
+            </a>
+        </p>
+    </div>
+    <style>
+        .container-fluids {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .container-fluids a {
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluids a:hover {
+            color: #f4c20d; /* A golden classy hover effect */
+            text-decoration: underline; /* Optional underline on hover */
+        }
+        
+    </style>
+    
+    <!-- Developed By Section End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: red;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

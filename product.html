@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hairnic - Single Product Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+<div id="spinner" 
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="paint-loader">
+    <div class="brush-stroke brush-stroke-1"></div>
+    <div class="brush-stroke brush-stroke-2"></div>
+    <div class="brush-stroke brush-stroke-3"></div>
+    <div class="brush-stroke brush-stroke-4"></div>
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Styles for the painty loader -->
+<style>
+/* Basic Loader Styling */
+#spinner {
+    z-index: 1050;
+}
+
+/* Painty Animation */
+.paint-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    border-radius: 5px;
+    animation: paint-stroke 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.brush-stroke-1 {
+    animation-delay: 0s;
+}
+
+.brush-stroke-2 {
+    animation-delay: 0.3s;
+}
+
+.brush-stroke-3 {
+    animation-delay: 0.6s;
+}
+
+.brush-stroke-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes paint-stroke {
+    0% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50px) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+}
+</style>
+
+
+
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/name.png" alt="Galaxy Paints" class="navbar-logo">
+            </a>
+            <style>
+                .navbar-logo {
+                    margin-top: 0px;
+                    height: auto; 
+                    max-height: 100%; 
+                    width: 300px;
+                }
+
+                .get-quote-mobile {
+                    display: none; /* Default hidden */
+                    position: absolute;
+                    top: 90px; /* Align with hamburger */
+                    left: 0px; /* Left side */
+                    z-index: 1050; /* Ensure it's above other elements */
+                    padding: 10px 15px;
+                    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+                    color: white;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                }
+
+                .get-quote-mobile:hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+
+                /* Show button only in mobile view */
+                @media (max-width: 991px) {
+                    .get-quote-mobile {
+                        display: block;
+                    }
+                }
+            </style>
+            <a href="quote.html" class="get-quote-mobile">Get Quote</a>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="product.html" class="nav-item nav-link">Products</a>
+                    <a href="services.html" class="nav-item nav-link">Services</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="quote.html" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">Get Quote</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-white mb-3 animated slideInDown">Products</h1>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+ <!-- Product Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="text-primary mb-3" style="color: red;"><span class="fw-light text-dark">Our </span>Products</h1>
+            <p class="mb-5">Explore our range of premium products designed for both interior and exterior applications. Delivering quality and durability for your projects.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Product 1 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/lotus-int-emulsion.jpg" alt="Lotus Luxury Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>LOTUS</h3>
+                        <h3>Luxury Interior Emulsion</h3>
+                        <p>Galaxy Paints introduces LOTUS LUXURY Emulsion, showcasing distinctive attributes that include superior stain resistance, a lustrous sheen, an exceptionally smooth finish, low Volatile Organic Compounds (VOC) for enhanced air quality, lead-free composition, and environmentally friendly features. Furthermore, it exhibits a mild aroma. This adaptable paint is suitable for application on diverse surfaces, encompassing sleek false ceilings, asbestos sheets, brickwork, concrete blocks, and fiberboard.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Utilize the Lotus Effect for a High Sheen Finish</li>
+                            <li>Exhibit High Resistance to Stains</li>
+                            <li>Possess High Opacity, providing a Robust and Washable Surface</li>
+                            <li>Demonstrate High Water Vapor Permeability</li>
+                            <li>Offer Low Volatile Organic Compounds (VOC) with High Coverage and a Wide Range of Colors</li>
+                            <li>Facilitate Easy Application</li>
+                            <li>Backed by a 7-Year Performance Warranty</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1750+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 195 - 210 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 115 - 125 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/lustre-waterbased.jpg" alt="Lustre Water Base">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>LUSTRE</h3>
+                        <h3>Water Base</h3>
+                        <p>Galaxy Paint's Galaxy Water-Based Luster is a metallic finish specially formulated with pure acrylic emulsion, designed for elegant, smooth, and durable interiors. It provides walls with a delightful, attractive, designer finish that stands the test of time.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Brilliant durability</li>
+                            <li>Rich Sheen</li>
+                            <li>Brilliant stain resistance</li>
+                            <li>Anti-fungal shield</li>
+                            <li>Abrasion Resistant Translucent</li>
+                            <li>7 years performance warranty</li>
+                            <li>Translucent with abrasion-resistant properties</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1750+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 155 - 160 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 95 - 100 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/glowstar-premium-emulsion.jpg" alt="Glowstar Premium Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>GLOWSTAR</h3>
+                        <h3>Premium Emulsion</h3>
+                        <p>Galaxy Paint's Glowstar interior/exterior metallic finish is meticulously crafted with a proprietary blend of pure acrylic emulsion. Tailored for sophisticated, seamless, and long-lasting interiors, this formulation imparts walls with a charming, alluring, and designer aesthetic that endures the passage of time.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Brilliant durability</li>
+                            <li>Rich Sheen</li>
+                            <li>Brilliant stain resistance</li>
+                            <li>Anti-fungal shield</li>
+                            <li>Abrasion Resistant Translucent</li>
+                            <li>5 years performance warranty</li>
+                            <li>Water resistant</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1750+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 155 - 160 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 95 - 100 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/galaxymagic-int-emulsion.jpg" alt="Magic Touch Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>MAGIC TOUCH</h3>
+                        <h3>Interior Emulsion</h3>
+                        <p>Galaxy Paints Magic Touch Interior Emulsion is a thick and creamy emulsion paint designed for high-quality, durable finishes on both new constructions and renovation projects for standard interior walls and ceilings. Thanks to its VOC-free formulation with low emissions, the coating allows the surface to "breathe". With exceptional vapor permeability and scrub resistance, it is an ideal choice to meet the requirements of average traffic environments.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Superior whiteness</li>
+                            <li>Outstanding opacity</li>
+                            <li>Seamless application with no roller or brush marks</li>
+                            <li>Exceptional dry scrub resistance</li>
+                            <li>Long-lasting and diffusible</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1750+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 135 - 145 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 85 - 90 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/ocean-int-emulsion.jpg" alt="Ocean Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>OCEAN</h3>
+                        <h3>Interior Emulsion</h3>
+                        <p>Galaxy Paints Ocean Interior Emulsion offers a dense and velvety emulsion paint specifically crafted to deliver enduring, superior finishes on standard interior walls and ceilings in both new construction and renovation endeavors. Its VOC-free formulation, featuring minimal emissions, not only ensures environmental friendliness but also facilitates optimal surface breathability. Boasting outstanding vapor permeability and scrub resistance, this emulsion paint stands out as an ideal solution for meeting the stringent demands of typical high-traffic environments.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Boasting a high level of whiteness</li>
+                            <li>Exhibiting exceptional opacity</li>
+                            <li>Facilitating easy application without the presence of roller or brush marks</li>
+                            <li>Demonstrating impressive dry scrub resistance</li>
+                            <li>Possessing durability and diffusibility</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1750+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 125 - 135 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 80 - 90 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/microshield-ext-emulson.jpg" alt="Micro Shield Exterior Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>MICRO SHIELD</h3>
+                        <h3>Exterior Emulsion</h3>
+                        <p>The Galaxy Paints "Micro Shield Exterior Luxury Emulsion" is an advanced water-based solution, formulated with 100% Acrylic for a smooth finish. Enhanced with silicon additives, this emulsion provides exceptional weatherproofing and anti-algae properties, ensuring high-performance protection for exterior walls.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Exceptional coverage and a broad spectrum of colors available</li>
+                            <li>Resilient against various weather conditions</li>
+                            <li>Provides long-term protection and boasts high durability</li>
+                            <li>Highly permeable to water vapor</li>
+                            <li>Exhibits outstanding adhesion</li>
+                            <li>Features an excellent Dirt Pick up Resistance Sheen Finish</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1700+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 165 - 175 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 110 - 120 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/dampproof.jpg" alt="Damp Proof Top Coat">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>DAMP PROOF</h3>
+                        <h3>Top Coat</h3>
+                        <p>Galaxy Paints PAREX DAMP PROOF (Exterior) Acrylic Polymer Base Liquid provides a waterproof protective system in cementitious composite for protective coating. The system is useful for waterproof coating, overlays cement sand repair mortars, and can be used as a bonding agent and glossy look exterior emulsion.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High Adhesion Water proofing</li>
+                            <li>Unmatched crack bridging ability Weather resistant</li>
+                            <li>Long-term protection and high durability</li>
+                            <li>Excellent adhesion</li>
+                            <li>Excellent Dirt Pick up Resistance Sheen Finish</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1700+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 175 - 185 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 110 - 120 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/parex-ext-emulsion.jpg" alt="Parex Exterior Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>PAREX</h3>
+                        <h3>Exterior Emulsion</h3>
+                        <p>Galaxy Paints PAREX EXTERIOR EMULSION is a smooth water-based, modified acrylic exterior wall finish with added silicon. It boasts improved anti-algal properties and is designed for high performance and durability, specifically engineered to endure extreme tropical conditions, including heavy rainfall, high humidity, and intense heat. The inclusion of light-fast pigments, special additives, and anti-fungal/anti-algal agents provides excellent resistance against the growth of algae and fungi on the walls.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High Adhesion Anti-Dirt Pickup Anti-Fading</li>
+                            <li>5 years performance warranty</li>
+                            <li>High coverage and wide colour offer</li>
+                            <li>Weather resistant</li>
+                            <li>Long-term protection and high durability</li>
+                            <li>Soft Sheen Finish</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1700+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 165 - 175 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 110 - 120 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/maptec-ext-emulsion.jpg" alt="Maptec Exterior Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>MAPTEC</h3>
+                        <h3>Exterior Emulsion</h3>
+                        <p>Galaxy Paints Maptec Exterior Emulsion is a water-based exterior wall finish with added silicon additives, designed for use in dry to moderately humid climatic conditions.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High Adhesion Anti-Dirt Pickup Anti-Fading</li>
+                            <li>5 years performance warranty</li>
+                            <li>High coverage and wide colour offer</li>
+                            <li>Weather resistant</li>
+                            <li>Long-term protection and high durability</li>
+                            <li>Soft Sheen Finish</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1500+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 145 - 160 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 95 - 110 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/mapro-ext-emulsion.jpg" alt="Mapro Exterior Emulsion">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>MAPRO</h3>
+                        <h3>Exterior Emulsion</h3>
+                        <p>Galaxy Paints Mapro Exterior Emulsion is a water-based exterior wall finish with added silicon additives, designed for use in dry to moderately humid climatic conditions.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High Adhesion Anti-Dirt Pickup Anti-Fading</li>
+                            <li>5 years performance warranty</li>
+                            <li>High coverage and wide colour offer</li>
+                            <li>Weather resistant</li>
+                            <li>Long-term protection and high durability</li>
+                            <li>Soft Sheen Finish</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1500+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 145 - 160 sq.ft/L<br>
+                            <strong>2 Coat:</strong> 95 - 110 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+                <!-- Product 11 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/galaxy-acrylicdistember.jpg" alt="Galaxy Acrylic Distemper">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>GALAXY</h3>
+                        <h3>Acrylic Distemper</h3>
+                        <p>Galaxy Paints Galaxy Acrylic distemper is a water-based, interior wall paint. It is a value-for-money product that makes it possible for consumers to have beautiful walls at affordable prices.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Smooth and Matt finish</li>
+                            <li>Better Coverage</li>
+                            <li>Clean your stains with a wet cloth</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1050+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20kg / 10kg / 4kg / 1kg</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 85 - 105 sq.ft/kg<br>
+                            <strong>2 Coat:</strong> 65 - 85 sq.ft/kg
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/joydistember-int.jpg" alt="Joy Acrylic Distemper">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>JOY</h3>
+                        <h3>Acrylic Distemper</h3>
+                        <p>Galaxy Paints Joy Acrylic distemper is a water-based, interior wall paint. It is a value-for-money product that makes it possible for consumers to have beautiful walls at affordable prices.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Smooth and Matt finish</li>
+                            <li>Better Coverage</li>
+                            <li>Clean your stains with a wet cloth</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in 1050+ Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20kg / 10kg / 4kg / 1kg</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 65 - 75 sq.ft/kg<br>
+                            <strong>2 Coat:</strong> 40 - 50 sq.ft/kg
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/galaxywallprimer.jpg" alt="Galaxy Wall Primer">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>GALAXY</h3>
+                        <h3>Wall Primer</h3>
+                        <p>Unveil the excellence of Galaxy Paints Galaxy Wall Primer, a premium water-based wall coating designed for exterior use. Acting as a reliable undercoat, it prepares surfaces for the application of exterior emulsions, delivering both durability and an impeccable appearance.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High spreading rate and concentration</li>
+                            <li>Excellent opacity and whiteness</li>
+                            <li>Dry abrasion resistant properties</li>
+                            <li>Provides excellent adhesion to top coat emulsions</li>
+                            <li>Prevents peeling off of top coat emulsions</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 175 - 180 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/maproprimer.jpg" alt="Mapro Wall Primer">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>MAPRO</h3>
+                        <h3>Wall Primer</h3>
+                        <p>Elevate your exterior surfaces with Galaxy Paints Mapro Exterior Wall Primer, a top-tier water-based wall coating. This primer, serving as the perfect undercoat, paves the way for the application of exterior emulsions, ensuring a resilient and aesthetically pleasing result.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High spreading rate and concentration</li>
+                            <li>Excellent opacity and whiteness</li>
+                            <li>Dry abrasion resistant properties</li>
+                            <li>Provides excellent adhesion to top coat emulsions</li>
+                            <li>Prevents peeling off of top coat emulsions</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 155 - 160 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+                <!-- Product 15 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/wallkingprimer.jpg" alt="Wall King Wall Primer">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>WALL KING</h3>
+                        <h3>Wall Primer</h3>
+                        <p>Transform your outdoor spaces with Galaxy Paints Wall King Exterior Primer—a state-of-the-art water-based wall coating. As an effective undercoat to exterior emulsions, it not only enhances the longevity of the finish but also adds a touch of sophistication to your exteriors.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High spreading rate and concentration</li>
+                            <li>Excellent opacity and whiteness</li>
+                            <li>Dry abrasion resistant properties</li>
+                            <li>Provides excellent adhesion to top coat emulsions</li>
+                            <li>Prevents peeling off of top coat emulsions</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 145 - 150 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/kentprimer.jpg" alt="Kent Wall Primer">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>KENT</h3>
+                        <h3>Wall Primer</h3>
+                        <p>Discover the innovation behind Galaxy Paints Kent Exterior Primer, a water-based wall coating crafted for exterior surfaces. Engineered as an undercoat, it seamlessly prepares exteriors for the application of emulsions, offering both protective and decorative benefits for a stunning outcome.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>High spreading rate and concentration</li>
+                            <li>Excellent opacity and whiteness</li>
+                            <li>Dry abrasion resistant properties</li>
+                            <li>Provides excellent adhesion to top coat emulsions</li>
+                            <li>Prevents peeling off of top coat emulsions</li>
+                            <li>Economy and High-selling Product from Galaxy Paints</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20L / 10L / 4L / 1L</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 140 - 145 sq.ft/L
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/acrylic-wallputty.jpg" alt="Acrylic Wall Putty - 3D">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>ACRYLIC</h3>
+                        <h3>Wall Putty - 3D</h3>
+                        <p>Galaxy Paints Acrylic Putty provides a very strong and durable foundation, enhancing the overall performance of the finishing paints, both in terms of appearance and durability.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Ready-to-use putty with strong grip on the wall surface</li>
+                            <li>Exceptional whiteness</li>
+                            <li>Smoothness and quick drying</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20kg / 10kg / 4kg / 1kg</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 110 - 120 sq.ft/kg<br>
+                            <strong>2 Coat:</strong> 65 - 75 sq.ft/kg
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img class="img-fluid mb-4" src="img/acrylic-wallputty-int.jpg" alt="Acrylic Wall Putty">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>ACRYLIC</h3>
+                        <h3>Wall Putty</h3>
+                        <p>Galaxy Paints Walking Acrylic Putty provides a very strong and durable foundation, enhancing the overall performance of the finishing paints, both in terms of appearance and durability.</p>
+                        <h6>Product Features:</h6>
+                        <ul>
+                            <li>Ready-to-use putty with strong grip on the wall surface</li>
+                            <li>Exceptional whiteness</li>
+                            <li>Smoothness and quick drying</li>
+                        </ul>
+                        <h6>Colour Availability:</h6>
+                        <p>Available in White Shades</p>
+                        <h6>Available Packs:</h6>
+                        <p>20kg / 10kg / 4kg / 1kg</p>
+                        <p>
+                            <strong>Coverage:</strong><br>
+                            <strong>1 Coat:</strong> 90 - 95 sq.ft/kg<br>
+                            <strong>2 Coat:</strong> 55 - 60 sq.ft/kg
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Product End -->
+<style>
+    @media (min-width: 768px) {
+        .row.align-items-center {
+            display: flex;
+            align-items: center;
+        }
+        .flex-md-row-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    @media (max-width: 767px) {
+        .row.align-items-center {
+            flex-direction: column;
+            text-align: center;
+        }
+    }    
+</style>
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-white footer">
+    <div class="container py-5">
+        <div class="row g-5 text-center text-lg-start">
+            <!-- Logo and Description -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="img/footer-logo.jpg" alt="Galaxy Paints Logo" class="img-fluid" style="width: 200px; height: auto ; margin-top: -60px">
+                </a>
+                <p class="mb-0">Your trusted partner for superior painting solutions.</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3" style="color: red;"></i>Sector No-4, Balaji Heights, 4th Floor, Near Jay Ganesh Samrajya chowk, Moshi, Pune, India 412105</p>
+                <p><i class="fa fa-phone-alt me-3" style="color: red;"></i>+91 9527702536</p>
+                <p><i class="fa fa-envelope me-3" style="color: red;"></i>accounts@galaxypaint.in</p>
+                <div class="d-flex justify-content-center justify-content-lg-start pt-2">
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.facebook.com/galaxypaintspune" ><i class="fab fa-facebook-f" style="color: black;"></i></a>
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.instagram.com/galaxypaints.official?igsh=dmZyaDFvbWl5N3Ax"><i class="fab fa-instagram" style="color: black;"></i></a>
+                </div>
+            </div>
+            <!-- Products Section -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="mb-4">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">LOTUS Luxury Interior Emulsion</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">LUSTRE Water Base</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">GLOWSTAR Premium Emulsion</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">PAREX Exterior Emulsion</a></li>
+                </ul>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="mb-4">Popular Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="about.html" style="color: inherit;">About Us</a></li>
+                    <li><a class="btn btn-link" href="contact.html" style="color: inherit;">Contact Us</a></li>
+                    <li><a class="btn btn-link" href="" style="color: inherit;">Download Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <div class="hidden-backlink">
+        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+    </div>
+     <style>
+        .hidden-backlink {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+        
+     </style>
+    <!-- Developed By Section Start -->
+    <div class="container-fluids py-4 bg-dark text-center">
+        <p class="mb-0 text-light" style="font-size: 14px;">
+            Designed & Developed by 
+            <a href="https://sreyas.tech" target="_blank" class="text-uppercase text-primary fw-bold text-decoration-none">
+                S.R.E.Y.A.S
+            </a>
+        </p>
+    </div>
+    <style>
+        .container-fluids {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .container-fluids a {
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluids a:hover {
+            color: #f4c20d; /* A golden classy hover effect */
+            text-decoration: underline; /* Optional underline on hover */
+        }
+        
+    </style>
+    
+    <!-- Developed By Section End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: red;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Spinner Start -->
+<div id="spinner" 
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="paint-loader">
+    <div class="brush-stroke brush-stroke-1"></div>
+    <div class="brush-stroke brush-stroke-2"></div>
+    <div class="brush-stroke brush-stroke-3"></div>
+    <div class="brush-stroke brush-stroke-4"></div>
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Styles for the painty loader -->
+<style>
+/* Basic Loader Styling */
+#spinner {
+    z-index: 1050;
+}
+
+/* Painty Animation */
+.paint-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    border-radius: 5px;
+    animation: paint-stroke 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.brush-stroke-1 {
+    animation-delay: 0s;
+}
+
+.brush-stroke-2 {
+    animation-delay: 0.3s;
+}
+
+.brush-stroke-3 {
+    animation-delay: 0.6s;
+}
+
+.brush-stroke-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes paint-stroke {
+    0% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50px) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+}
+</style>
+
+</body>
+</html>

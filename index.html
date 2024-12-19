@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hairnic - Single Product Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+<div id="spinner" 
+class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="paint-loader">
+    <div class="brush-stroke brush-stroke-1"></div>
+    <div class="brush-stroke brush-stroke-2"></div>
+    <div class="brush-stroke brush-stroke-3"></div>
+    <div class="brush-stroke brush-stroke-4"></div>
+</div>
+</div>
+<!-- Spinner End -->
+
+<!-- Styles for the painty loader -->
+<style>
+/* Basic Loader Styling */
+#spinner {
+    z-index: 1050;
+}
+
+/* Painty Animation */
+.paint-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    border-radius: 5px;
+    animation: paint-stroke 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.brush-stroke-1 {
+    animation-delay: 0s;
+}
+
+.brush-stroke-2 {
+    animation-delay: 0.3s;
+}
+
+.brush-stroke-3 {
+    animation-delay: 0.6s;
+}
+
+.brush-stroke-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes paint-stroke {
+    0% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50px) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scaleX(0.2);
+        opacity: 0.8;
+    }
+}
+</style>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/name.png" alt="Galaxy Paints" class="navbar-logo">
+                </a>
+                <style>
+                    .navbar-logo {
+                        margin-top: 0px;
+                        height: auto; 
+                        max-height: 100%; 
+                        width: 300px;
+                    }
+                    
+                </style>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="quote.html" class="btn btn-dark py-2 px-4 d-none d-lg-inline-block">  Get Quote</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h3 class="fw-light text-white animated slideInRight">Galaxy Paints</h3>
+                    <h1 class="display-4 text-white animated slideInRight">Premium Paints For Every Surface</h1>
+                    <p class="text-white mb-4 animated slideInRight">Discover our wide range of high-quality paints designed for durability and style. Perfect for homes, offices, and industrial spaces, crafted to add vibrant colors and lasting protection.</p>
+                    <a href="contact.html" class="btn btn-outline-dark py-2 px-4 animated slideInRight">Contact Us</a>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid animated pulse infinite" src="img/img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/up.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="text-primary mb-4" style="color: red;">Experience Colours <span class="fw-light text-dark">That Inspire Excellence</span></h1>
+                    <p class="mb-4">At Galaxy Paints, we pride ourselves on delivering high-quality paint solutions that transform your spaces. From vibrant interiors to durable exteriors, our paints are designed to meet all your needs.</p>
+                    <p class="mb-4">With advanced formulations and a commitment to sustainability, we ensure every product stands out for its durability, finish, and eco-friendliness. Discover colors that inspire and quality that lasts.</p>
+                    <a class="btn btn-primary py-2 px-4" href="about.html" style="background-color: red;">About Us</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+
+    <!-- Feature Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="text-primary mb-3" style="color: red;"><span class="fw-light text-dark">Experience the Best</span> <br> with Galaxy Paints</h1>
+            <p class="mb-5">Transform your walls with our premium range of paints, crafted to deliver vibrant colors, unmatched durability, and a flawless finish every time.</p>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                <div class="row g-5">
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Eco-Friendly Formula</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Our paints are free from harmful chemicals, ensuring safety for your home and the planet.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Long-Lasting Finish</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Durable paints that resist cracking, peeling, and fading for years to come.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Vibrant Color Options</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Choose from a stunning palette of colors to match your vision perfectly.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                <img class="img-fluid animated pulse infinite" src="img/bucket.png" alt="Paint Bucket">
+            </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                <div class="row g-5">
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Easy Application</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Our paints are designed for smooth application, reducing effort and time.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Stain Resistance</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Keep your walls looking fresh with paints that repel stains and dirt.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex">
+                        <div class="btn-square rounded-circle border flex-shrink-0" style="width: 80px; height: 80px;">
+                            <i class="fa fa-check fa-2x " style="color: red;"></i>
+                        </div>
+                        <div class="ps-3">
+                            <h5>Low Odor</h5>
+                            <hr class="w-25 bg-primary my-2">
+                            <span>Enjoy a painting experience without the strong, unpleasant smell.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+
+  <!-- How To Use Start -->
+<div class="container-fluid how-to-use bg-primary my-5 py-5">
+    <div class="container text-black py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3" style="color: red;"><span class="fw-light text-dark">6 Steps</span> to Achieve the Best Results in Wall Painting</h1>
+            <p class="mb-5">Follow these essential steps to ensure a flawless painting experience and long-lasting, beautiful walls.</p>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-cogs fa-3x " style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Preparation</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Set up a "crime scene" to protect furniture and surfaces, saving cleaning time later. Cover furniture and tape off edges.</span>
+            </div>
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-search fa-3x " style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Inspect & Prepare Substrate</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Ensure walls are clean, dry, and stable. Scrape off old, loose paint and let new plaster cure for at least 4 weeks.</span>
+            </div>
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-wrench fa-3x" style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Address Cracks & Imperfections</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Repair cracks or bulges with stucco or sealant. Remove stains, grease, and dirt using soapy water as needed.</span>
+            </div>
+        </div>
+        <div class="row g-5 mt-3">
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.7s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-paint-brush fa-3x" style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Apply Penetrating Primer</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Strengthen walls with primer to improve paint adhesion, even out absorption, and reduce paint use.</span>
+            </div>
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.9s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-paint-roller fa-3x" style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Painting Technique</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Start with edges using a brush, then roll paint in overlapping stripes from windows. Apply two coats for a flawless finish.</span>
+            </div>
+            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.9s">
+                <div class="btn-square rounded-circle border mx-auto mb-4" style="width: 120px; height: 120px;">
+                    <i class="fa fa-check-circle fa-3x" style="color: red;"></i>
+                </div>
+                <h5 class="text-black">Final Touches</h5>
+                <hr class="w-25 bg-light my-2 mx-auto">
+                <span>Ensure smooth finish by applying a second coat, and touch up any imperfections.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- How To Use End -->
+
+
+
+<!-- Product Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="text-primary mb-3" style="color: red;"><span class="fw-light text-dark">Our </span>Products</h1>
+            <p class="mb-5">Explore our range of premium products designed for both interior and exterior applications. Delivering quality and durability for your projects.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="product-item text-center border h-100 p-4 position-relative">
+                    
+                    <div class="position-absolute top-0 start-0 px-2 py-1" style="border-radius: 0 8px 8px 0; color:red;">Premium</div>
+                    <div class="position-absolute top-0 end-0 bg-warning text-white px-2 py-1" style="border-radius: 0 0 10px 10px;">Luxury Finish</div>
+                    <!-- Product Image -->
+                    <img class="img-fluid mb-4" src="img/lotus-int-emulsion.jpg" alt="Lotus Luxury Emulsion">
+                    <a href="" class="h6 d-inline-block mb-2">Lotus Luxury Emulsion</a>
+                    <!-- Coverage Area -->
+                    <p class="text-muted">
+                        <strong>1 Coat:</strong> 195 - 210 sq.ft/L<br>
+                        <strong>2 Coat:</strong> 115 - 125 sq.ft/L
+                    </p>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="product-item text-center border h-100 p-4 position-relative">
+                    
+                    <div class="position-absolute top-0 start-0 px-2 py-1" style="border-radius: 0 8px 8px 0; color:red;">Premium</div>
+                    <div class="position-absolute top-0 end-0 bg-warning text-white px-2 py-1" style="border-radius: 0 0 10px 10px;">Luxury Quality</div>
+                    <!-- Product Image -->
+                    <img class="img-fluid mb-4" src="img/microshield-ext-emulson.jpg" alt="Micro Shield">
+                    <a href="" class="h6 d-inline-block mb-2">Micro Shield</a>
+                    <!-- Coverage Area -->
+                    <p class="text-muted">
+                        <strong>1 Coat:</strong> 165 - 175 sq.ft/L<br>
+                        <strong>2 Coat:</strong> 110 - 120 sq.ft/L
+                    </p>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <div class="product-item text-center border h-100 p-4 position-relative">
+                    
+                    <div class="position-absolute top-0 start-0 px-2 py-1" style="border-radius: 0 8px 8px 0; color:red;">Premium</div>
+                    <div class="position-absolute top-0 end-0 bg-warning text-white px-2 py-1" style="border-radius: 0 0 10px 10px;">Int/Ext</div>
+                    <!-- Product Image -->
+                    <img class="img-fluid mb-4" src="img/galaxywallprimer.jpg" alt="Galaxy Primer">
+                    <a href="" class="h6 d-inline-block mb-2">Galaxy Wall Primer</a>
+                    <!-- Coverage Area -->
+                    <p class="text-muted">
+                        <strong>1 Coat:</strong> 175 - 180 sq.ft/L<br>
+                    </p>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <div class="product-item text-center border h-100 p-4 position-relative">
+                    
+                    <div class="position-absolute top-0 start-0 px-2 py-1" style="border-radius: 0 8px 8px 0; color:red;">Premium</div>
+                    <div class="position-absolute top-0 end-0 bg-warning text-white px-2 py-1" style="border-radius: 0 0 10px 10px;">Water Proof</div>
+                    <!-- Product Image -->
+                    <img class="img-fluid mb-4" src="img/dampproof.jpg" alt="Dampproof">
+                    <a href="" class="h6 d-inline-block mb-2">Dampproof</a>
+                    <!-- Coverage Area -->
+                    <p class="text-muted">
+                        <strong>1 Coat:</strong> 175 - 185 sq.ft/L<br>
+                        <strong>2 Coat:</strong> 110 - 120 sq.ft/L
+                    </p>
+                </div>
+            </div>
+        </div><br>
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <a href="product.html" class="btn btn-dark"> More Products</a>
+        </div>
+    </div>
+</div>
+<!-- Product End -->
+
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid testimonial bg-primary my-5 py-5">
+        <div class="container text-white py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-white mb-3">Our Customer Said <span class="fw-light text-dark">About Our Natural Shampoo</span></h1>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
+                        <div class="testimonial-item text-center" data-dot="1">
+                            <img class="img-fluid border p-2" src="img/testimonial-1.jpg" alt="">
+                            <h5 class="fw-light lh-base text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus. Praesent tristique odio ut rutrum pellentesque. Fusce eget molestie est, at rutrum est. Nullam scelerisque libero nunc, vitae ullamcorper elit volutpat ut.</h5>
+                            <h5 class="mb-1">Client Name</h5>
+                            <h6 class="fw-light text-white fst-italic mb-0">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center" data-dot="2">
+                            <img class="img-fluid border p-2" src="img/testimonial-2.jpg" alt="">
+                            <h5 class="fw-light lh-base text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus. Praesent tristique odio ut rutrum pellentesque. Fusce eget molestie est, at rutrum est. Nullam scelerisque libero nunc, vitae ullamcorper elit volutpat ut.</h5>
+                            <h5 class="mb-1">Client Name</h5>
+                            <h6 class="fw-light text-white fst-italic mb-0">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center" data-dot="3">
+                            <img class="img-fluid border p-2" src="img/testimonial-3.jpg" alt="">
+                            <h5 class="fw-light lh-base text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus. Praesent tristique odio ut rutrum pellentesque. Fusce eget molestie est, at rutrum est. Nullam scelerisque libero nunc, vitae ullamcorper elit volutpat ut.</h5>
+                            <h5 class="mb-1">Client Name</h5>
+                            <h6 class="fw-light text-white fst-italic mb-0">Profession</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+<!-- Footer Start -->
+<div class="container-fluid bg-white footer">
+    <div class="container py-5">
+        <div class="row g-5 text-center text-lg-start">
+            <!-- Logo and Description -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <img src="img/footer-logo.jpg" alt="Galaxy Paints Logo" class="img-fluid" style="width: 200px; height: auto ; margin-top: -60px">
+                </a>
+                <p class="mb-0">Your trusted partner for superior painting solutions.</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3" style="color: red;"></i>Sector No-4, Balaji Heights, 4th Floor, Near Jay Ganesh Samrajya chowk, Moshi, Pune, India 412105</p>
+                <p><i class="fa fa-phone-alt me-3" style="color: red;"></i>+91 9527702536</p>
+                <p><i class="fa fa-envelope me-3" style="color: red;"></i>accounts@galaxypaint.in</p>
+                <div class="d-flex justify-content-center justify-content-lg-start pt-2">
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.facebook.com/galaxypaintspune" ><i class="fab fa-facebook-f" style="color: black;"></i></a>
+                    <a class="btn btn-square btn-outline-primary me-2" href="https://www.instagram.com/galaxypaints.official?igsh=dmZyaDFvbWl5N3Ax"><i class="fab fa-instagram" style="color: black;"></i></a>
+                </div>
+            </div>
+            <!-- Products Section -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="mb-4">Our Products</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">LOTUS Luxury Interior Emulsion</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">LUSTRE Water Base</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">GLOWSTAR Premium Emulsion</a></li>
+                    <li><a class="btn btn-link" href="product.html" style="color: inherit;">PAREX Exterior Emulsion</a></li>
+                </ul>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="mb-4">Popular Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-link" href="about.html" style="color: inherit;">About Us</a></li>
+                    <li><a class="btn btn-link" href="contact.html" style="color: inherit;">Contact Us</a></li>
+                    <li><a class="btn btn-link" href="" style="color: inherit;">Download Brochure</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <div class="hidden-backlink">
+        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+    </div>
+     <style>
+        .hidden-backlink {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+        
+     </style>
+    <!-- Developed By Section Start -->
+    <div class="container-fluids py-4 bg-dark text-center">
+        <p class="mb-0 text-light" style="font-size: 14px;">
+            Designed & Developed by 
+            <a href="https://sreyas.tech" target="_blank" class="text-uppercase text-primary fw-bold text-decoration-none">
+                S.R.E.Y.A.S
+            </a>
+        </p>
+    </div>
+    <style>
+        .container-fluids {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        .container-fluids a {
+            transition: color 0.3s ease;
+        }
+        
+        .container-fluids a:hover {
+            color: #f4c20d; /* A golden classy hover effect */
+            text-decoration: underline; /* Optional underline on hover */
+        }
+        
+    </style>
+    
+    <!-- Developed By Section End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: red;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
