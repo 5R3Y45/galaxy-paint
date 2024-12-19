@@ -367,29 +367,34 @@ rel="stylesheet">
         
         
         <script>
-            document.getElementById('sendQuote').addEventListener('click', function() {
-                const form = document.getElementById('quoteForm');
-                const formData = new FormData(form);
-            
-                let emailBody = "Quote Request Details:\n\n";
-            
-                formData.forEach((value, key) => {
-                    if (value && value > 0) { // Include only non-zero quantities
-                        emailBody += `${key.replaceAll('_', ' ')}: ${value}\n`;
-                    }
-                });
-            
-                // Construct the Gmail compose URL
-                const email = "sreyas.k.sajith@gmail.com"; // Replace with your email address
-                const subject = "Quote Request";
-                const body = encodeURIComponent(emailBody);
-                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${body}`;
-            
-                // Open Gmail compose in a new tab
-                window.open(gmailUrl, '_blank');
-            });
-            
-        </script>
+    document.getElementById('sendQuote').addEventListener('click', function () {
+        const form = document.getElementById('quoteForm');
+        const formData = new FormData(form);
+
+        let emailBody = "Quote Request Details:\n\n";
+
+        formData.forEach((value, key) => {
+            if (value && value > 0) { // Include only non-zero quantities
+                emailBody += `${key.replaceAll('_', ' ')}: ${value}\n`;
+            }
+        });
+
+        // Construct the Gmail compose URL
+        const email = "sreyas.k.sajith@gmail.com"; // Replace with your email address
+        const subject = "Quote Request";
+        const body = encodeURIComponent(emailBody);
+        const gmailUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        if (navigator.userAgent.match(/Mobile|Android|iPhone|iPad|iPod/i)) {
+            // Use mailto for better mobile compatibility
+            window.location.href = gmailUrl;
+        } else {
+            // Open Gmail compose in a new tab for desktop
+            window.open(gmailUrl, '_blank');
+        }
+    });
+</script>
+
     </div>
 </div>
 
